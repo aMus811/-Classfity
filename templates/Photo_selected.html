@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>图片分类识别系统</title>
+    <style>
+        .ui_button {
+            display: inline-block;
+            border-radius: 10px;
+            line-height: 44px;
+            padding: 0 20px;
+            color: #FFFFFF;
+            font-family: "微软雅黑";
+            cursor: pointer;
+            position: relative;
+        }
+
+        .ui_button_primary1 {
+            background-color: #EE914C;
+        }
+
+        .ui_button_primary2 {
+            background-color: #4472C4;
+        }
+
+        label.ui_button:hover {
+            background-color: #d46216;
+        }
+
+        img {
+            height: 65px;
+            width: 65px;
+            margin-outside: 10px;
+        }
+
+        .test1 {
+            box-sizing: content-box;
+            height: 100%;
+            padding: 150px;
+        }
+        a:link {
+            color: burlywood;
+        }
+
+        a:visited {
+            color: #FFFFFF;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="main" class="test1" style="text-align: center">
+    <div id="header" style="text-align:center">
+        <h1 style="font-family: Arial; font-size: 48px">图片分类</h1>
+    </div>
+
+    <br>
+    <div id="file_upload" style="text-align:center">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="text" name="textfield" value="" id="textfield"
+                   style="width: 520px;height: 44px; border: 0px; background-color: rgb(241, 243, 244); border-radius: 10px">
+            <label class="ui_button ui_button_primary1" for="xFile">上传</label>
+            <label class="ui_button ui_button_primary2" for="insure">确认</label>
+            <input name="fileField" type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0)"
+                   onchange="document.getElementById('textfield').value=this.value"/>
+            <input type="submit" id="insure" style="position:absolute;clip:rect(0 0 0 0);"/>
+        </form>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
